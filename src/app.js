@@ -4,11 +4,6 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = () => {
-  //write your code here
-  document.getElementById("excusa").innerHTML = generarExcusa();
-};
-
 let generarExcusa = () => {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
@@ -36,3 +31,8 @@ let generarExcusa = () => {
     when[whenIndex]
   );
 };
+
+const generateButton = document.getElementById("generateButton");
+generateButton.addEventListener("click", () => {
+  document.getElementById("excusa").innerHTML = generarExcusa();
+});
